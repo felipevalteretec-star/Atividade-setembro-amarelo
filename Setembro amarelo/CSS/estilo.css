@@ -1,3 +1,75 @@
+/* Estilos específicos para o formulário de cadastro */
+.cadastro-container {
+    max-width: 400px; /* Largura máxima do container do formulário */
+    margin: 60px auto; /* Centraliza na tela com margem superior/inferior */
+    background: #fffbe6; /* Fundo amarelo claro para destaque */
+    border-radius: 16px; /* Bordas arredondadas para visual moderno */
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10); /* Sombra suave para profundidade */
+    padding: 32px 24px; /* Espaçamento interno confortável */
+    display: flex; /* Usa flexbox para alinhar os itens */
+    flex-direction: column; /* Itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+.cadastro-container h2 {
+    color: #222; /* Título escuro para contraste */
+    margin-bottom: 24px; /* Espaço abaixo do título */
+    font-weight: 700; /* Título em negrito */
+}
+.cadastro-container .form-group {
+    width: 100%; /* Ocupa toda a largura do container */
+    margin-bottom: 18px; /* Espaço entre os campos do formulário */
+}
+.cadastro-container label {
+    display: block; /* Exibe o label em linha separada */
+    margin-bottom: 6px; /* Espaço abaixo do label */
+    color: #333; /* Cor escura para o texto do label */
+    font-size: 1rem; /* Tamanho padrão do texto */
+}
+.cadastro-container input {
+    width: 100%; /* Campo ocupa toda a largura disponível */
+    padding: 10px 12px; /* Espaçamento interno confortável */
+    border: 1px solid #ffd600; /* Borda amarela para destaque */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho padrão do texto */
+    background: #fff; /* Fundo branco para o campo */
+    transition: border-color 0.2s; /* Transição suave ao focar */
+}
+.cadastro-container input:focus {
+    border-color: #ffb300; /* Borda mais escura ao focar */
+    outline: none; /* Remove contorno padrão do navegador */
+}
+.cadastro-container button {
+    width: 100%; /* Botão ocupa toda a largura */
+    padding: 12px; /* Espaçamento interno confortável */
+    background: linear-gradient(90deg, #ffd600 60%, #fff176 100%); /* Gradiente amarelo */
+    color: #222; /* Texto escuro para contraste */
+    font-weight: 700; /* Texto em negrito */
+    border: none; /* Remove borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 1.1rem; /* Tamanho maior para destaque */
+    cursor: pointer; /* Cursor de mão ao passar */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Sombra leve no botão */
+    transition: background 0.2s; /* Transição suave no hover */
+}
+.cadastro-container button:hover {
+    background: linear-gradient(90deg, #fff176 60%, #ffd600 100%); /* Inverte gradiente ao passar o mouse */
+}
+.cadastro-container .icon-cadastro {
+    font-size: 2.5rem; /* Ícone grande para destaque */
+    color: #ffd600; /* Ícone amarelo */
+    margin-bottom: 12px; /* Espaço abaixo do ícone */
+}
+.cadastro-container .login-link {
+    margin-top: 18px; /* Espaço acima do link de login */
+    font-size: 0.98rem; /* Tamanho padrão do texto */
+    color: #333; /* Texto escuro */
+}
+.cadastro-container .login-link a {
+    color: #ffd600; /* Link amarelo para destaque */
+    text-decoration: underline; /* Sublinhado para indicar link */
+}
+
+
 
 body {
     margin: 0;
@@ -118,16 +190,23 @@ body {
 
 .maindiv {
     grid-area: main;
-    background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     padding: 32px;
     margin: 32px 0;
+    /* Estiliza o conteúdo principal *//* Posiciona na área 'main' do grid */
+    background-color: orange; /* Cor de fundo laranja */
+    width: 100%; /* Mudança: main ocupa todo o espaço disponível */
+}
+
+.maindiv h1, .maindiv h2, .maindiv h3 {
+    color: #111;
+    margin-bottom: 16px;
+    font-weight: 600;
 }
 
 .asidediv {
     grid-area: aside;
-    background-color: #222;
     min-width: 220px;
     max-width: 220px;
     width: 220px;
@@ -135,13 +214,13 @@ body {
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     padding: 16px 0;
-    margin: 32px 0 32px 16px;
+    margin: 32px 0 32px 0; /* Mudança: menu lateral alinhado à borda esquerda da grid aside */
 }
 
 .footerdiv {
     grid-area: footer;
     background: #222;
-    color: #FFD600;
+    color: #FFD600; 
     text-align: center;
     padding: 18px 0;
     border-radius: 12px 12px 0 0;
@@ -192,17 +271,12 @@ body {
 
 .asidediv { /* Estiliza a barra lateral */
     grid-area: aside; /* Posiciona na área 'aside' do grid */
-    background-color: blue; /* Cor de fundo azul */
     min-width: 220px; /* Mudança: largura mínima do aside */
     max-width: 220px; /* Mudança: largura máxima do aside */
     width: 220px; /* Mudança: largura fixa do aside */
 }
 
-.maindiv { /* Estiliza o conteúdo principal */
-    grid-area: main; /* Posiciona na área 'main' do grid */
-    background-color: orange; /* Cor de fundo laranja */
-    width: 100%; /* Mudança: main ocupa todo o espaço disponível */
-}
+
 
 .footerdiv { /* Estiliza o rodapé */
     grid-area: footer; /* Posiciona na área 'footer' do grid */
@@ -381,4 +455,76 @@ ul li.item-menu a .icon-menu {
     display: flex !important; /* Garante flexbox mesmo se houver conflito */
     align-items: center !important; /* Centraliza verticalmente */
     justify-content: flex-start !important; /* Alinha à esquerda */
+}
+
+
+/* Estilos específicos para o formulário de login */
+.login-container {
+    max-width: 400px; /* Largura máxima do container do formulário */
+    margin: 60px auto; /* Centraliza na tela com margem superior/inferior */
+    background: #fffbe6; /* Fundo amarelo claro para destaque */
+    border-radius: 16px; /* Bordas arredondadas para visual moderno */
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10); /* Sombra suave para profundidade */
+    padding: 32px 24px; /* Espaçamento interno confortável */
+    display: flex; /* Usa flexbox para alinhar os itens */
+    flex-direction: column; /* Itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+.login-container h2 {
+    color: #222; /* Título escuro para contraste */
+    margin-bottom: 24px; /* Espaço abaixo do título */
+    font-weight: 700; /* Título em negrito */
+}
+.login-container .form-group {
+    width: 100%; /* Ocupa toda a largura do container */
+    margin-bottom: 18px; /* Espaço entre os campos do formulário */
+}
+.login-container label {
+    display: block; /* Exibe o label em linha separada */
+    margin-bottom: 6px; /* Espaço abaixo do label */
+    color: #333; /* Cor escura para o texto do label */
+    font-size: 1rem; /* Tamanho padrão do texto */
+}
+.login-container input {
+    width: 100%; /* Campo ocupa toda a largura disponível */
+    padding: 10px 12px; /* Espaçamento interno confortável */
+    border: 1px solid #ffd600; /* Borda amarela para destaque */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho padrão do texto */
+    background: #fff; /* Fundo branco para o campo */
+    transition: border-color 0.2s; /* Transição suave ao focar */
+}
+.login-container input:focus {
+    border-color: #ffb300; /* Borda mais escura ao focar */
+    outline: none; /* Remove contorno padrão do navegador */
+}
+.login-container button {
+    width: 100%; /* Botão ocupa toda a largura */
+    padding: 12px; /* Espaçamento interno confortável */
+    background: linear-gradient(90deg, #ffd600 60%, #fff176 100%); /* Gradiente amarelo */
+    color: #222; /* Texto escuro para contraste */
+    font-weight: 700; /* Texto em negrito */
+    border: none; /* Remove borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 1.1rem; /* Tamanho maior para destaque */
+    cursor: pointer; /* Cursor de mão ao passar */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Sombra leve no botão */
+    transition: background 0.2s; /* Transição suave no hover */
+}
+.login-container button:hover {
+    background: linear-gradient(90deg, #fff176 60%, #ffd600 100%); /* Inverte gradiente ao passar o mouse */
+}
+.login-container .icon-login {
+    font-size: 2.5rem; /* Ícone grande para destaque */
+    color: #ffd600; /* Ícone amarelo */
+    margin-bottom: 12px; /* Espaço abaixo do ícone */
+}
+.login-container .register-link {
+    margin-top: 18px; /* Espaço acima do link de cadastro */
+    font-size: 0.98rem; /* Tamanho padrão do texto */
+    color: #333; /* Texto escuro */
+}
+.login-container .register-link a {
+    color: #ffd600; /* Link amarelo para destaque */
+    text-decoration: underline; /* Sublinhado para indicar link */
 }
