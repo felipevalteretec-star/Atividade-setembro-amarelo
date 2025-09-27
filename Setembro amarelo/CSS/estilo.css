@@ -1,0 +1,384 @@
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif; /* Fonte moderna */
+    background-color: #f8fafc; /* Fundo suave */
+    color: #222; /* Texto escuro padrão */
+    min-height: 100vh;
+}
+
+.divisao {
+    display: grid;
+    grid-template-columns: 220px 1fr 0px; /* aside fixo, main flexível */
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header header header"
+        "Nav Nav Nav"
+        "aside main bside"
+        "footer footer footer";
+    box-sizing: border-box;
+}
+
+#Headerdiv {
+    grid-area: header;
+    background: linear-gradient(90deg, #FFD600 80%, #fffbe6 100%); /* Gradiente amarelo */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07); /* Sombra suave */
+    padding: 0;
+}
+
+.cabecalho-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 80px;
+    border-bottom: 1px solid #eee; /* Linha sutil abaixo do cabeçalho */
+}
+
+.cabecalho-conteudo h1 {
+    color: #111;
+    font-size: 2.2rem; /* Título responsivo */
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.login-icon {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.2rem;
+    cursor: pointer;
+}
+
+#Navdiv, #Navdiv.navbarra {
+    grid-area: Nav;
+    background: #222; /* Navbar escura */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    gap: 16px;
+    justify-content: center;
+}
+
+.nav-btn {
+    background: #FFD600;
+    color: #222;
+    border: none;
+    padding: 10px 22px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 0 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.nav-btn:hover {
+    background: #ffe066;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.Barra-pesquisa {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin: 0 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.Barra-pesquisa input {
+    border: none;
+    outline: none;
+    padding: 6px;
+    font-size: 1rem;
+    background: transparent;
+}
+.Lupa-icon {
+    font-size: 1.2rem;
+    color: #111;
+    margin-left: 4px;
+}
+
+.bannerdiv {
+    grid-area: Banner;
+    background: linear-gradient(90deg, #fffbe6 0%, #FFD600 100%); /* Gradiente amarelo */
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #222;
+    border-radius: 12px;
+    margin: 24px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.maindiv {
+    grid-area: main;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    padding: 32px;
+    margin: 32px 0;
+}
+
+.asidediv {
+    grid-area: aside;
+    background-color: #222;
+    min-width: 220px;
+    max-width: 220px;
+    width: 220px;
+    color: #FFD600;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 16px 0;
+    margin: 32px 0 32px 16px;
+}
+
+.footerdiv {
+    grid-area: footer;
+    background: #222;
+    color: #FFD600;
+    text-align: center;
+    padding: 18px 0;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+    margin-top: 32px;
+}
+/* Mudança: Aumentar o tamanho dos ícones do menu lateral (login e cadastro) */
+ul li.item-menu a .icon-menu i {
+    font-size: 40px;
+}
+body {
+    margin: 0; /* Remove margem padrão do body */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Mudança: fonte mais moderna */
+    background-color: #f8fafc; /* Mudança: cor de fundo mais suave */
+    color: #222; /* Mudança: cor de texto padrão mais escura */
+    min-height: 100vh; /* Mudança: ocupa toda a altura da tela */
+}
+.divisao { /* Define o container principal como grid */
+    display: grid; /* Ativa o layout em grid */
+    /* Mudança: main ocupa a maior parte do centro, aside apenas o necessário */
+    grid-template-columns: 220px 1fr 0px; /* aside fixo, main flexível, sem bside */
+    grid-template-rows: 10%,5%,20%,50%,15%; /* Define altura das linhas do grid */
+    box-sizing: border-box; /* Inclui borda e padding no cálculo do tamanho */
+    border: solid,5px; /* Adiciona uma borda sólida de 5px */
+    grid-template-areas: "header header header" /* Define áreas nomeadas do grid */
+                         "Nav Nav Nav"
+                         "Banner Banner Banner"
+                         "aside main bside"
+                         "footer footer footer";
+}
+
+
+#Headerdiv { /* Estiliza o cabeçalho */
+    grid-area: header; /* Posiciona na área 'header' do grid */
+    background: linear-gradient(90deg, #FFD600 80%, #fffbe6 100%); /* Mudança: gradiente suave no cabeçalho */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07); /* Mudança: sombra mais suave */
+}
+
+#Navdiv { /* Estiliza a barra de navegação */
+    grid-area: Nav; /* Posiciona na área 'Nav' do grid */
+    background-color: yellow; /* Cor de fundo amarela */
+}
+
+.bannerdiv { /* Estiliza a seção do banner */
+    grid-area: Banner; /* Posiciona na área 'Banner' do grid */
+    background-color: green; /* Cor de fundo verde */
+}
+
+.asidediv { /* Estiliza a barra lateral */
+    grid-area: aside; /* Posiciona na área 'aside' do grid */
+    background-color: blue; /* Cor de fundo azul */
+    min-width: 220px; /* Mudança: largura mínima do aside */
+    max-width: 220px; /* Mudança: largura máxima do aside */
+    width: 220px; /* Mudança: largura fixa do aside */
+}
+
+.maindiv { /* Estiliza o conteúdo principal */
+    grid-area: main; /* Posiciona na área 'main' do grid */
+    background-color: orange; /* Cor de fundo laranja */
+    width: 100%; /* Mudança: main ocupa todo o espaço disponível */
+}
+
+.footerdiv { /* Estiliza o rodapé */
+    grid-area: footer; /* Posiciona na área 'footer' do grid */
+    background-color: blueviolet; /* Cor de fundo violeta */
+}
+
+.bsidediv { /* Estiliza a barra lateral secundária */
+    grid-area: bside; /* Posiciona na área 'bside' do grid */
+    background-color: blue; /* Cor de fundo azul */
+}
+
+#Headerdiv { /* Cabeçalho amarelo estilizado */
+    background: #FFD600; /* Cor de fundo amarelo */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra leve abaixo do cabeçalho */
+    padding: 0; /* Remove espaçamento interno */
+}
+
+.cabecalho-conteudo { /* Container do conteúdo do cabeçalho */
+    display: flex; /* Usa flexbox para alinhar os itens */
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: center; /* Centraliza horizontalmente */
+    position: relative; /* Permite posicionar o ícone de login */
+    height: 80px; /* Altura fixa do cabeçalho */
+}
+
+.cabecalho-conteudo h1 { /* Título do cabeçalho */
+    color: #111; /* Cor do texto preta */
+    font-size: 32px; /* Tamanho da fonte grande */
+    margin: 0 auto; /* Centraliza o texto */
+    font-weight: bold; /* Negrito */
+}
+
+.login-icon { /* Ícone de login à direita */
+    position: absolute; /* Posiciona em relação ao container */
+    right: 30px; /* Distância da borda direita */
+    font-size: 32px; /* Tamanho grande do ícone */
+    cursor:pointer; /* Cursor de mão ao passar */
+}
+
+#Navdiv.navbarra { /* Barra de navegação preta */
+    background: #111; /* Cor de fundo preta */
+    display: flex; /* Usa flexbox para os itens */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding: 10px 0; /* Espaçamento interno vertical */
+    gap: 10px; /* Espaço entre os itens */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.nav-btn { /* Botões amarelos da navegação */
+    background: #FFD600; /* Fundo amarelo */
+    color: #111; /* Texto preto */
+    border: none; /* Sem borda */
+    padding: 8px 18px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mão */
+    font-weight: bold; /* Negrito */
+    margin: 0 2px; /* Espaço lateral entre botões */
+    transition: background 0.2s; /* Transição suave no hover */
+}
+.nav-btn:hover { /* Efeito ao passar o mouse */
+    background: purple; /* Roxo ao passar o mouse, pensando em colocar outra cor*/
+}
+
+.Pesquisa-barra { /* Barra de pesquisa */
+    display: flex; /* Usa flexbox para alinhar os itens */
+    align-items: center; /* Alinha verticalmente ao centro */
+    background: #fff; /* Fundo branco */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 2px 8px; /* Espaçamento interno */
+    margin: 0 8px; /* Espaço lateral */
+}
+.Pesquisa-barra input { /* Campo de texto da pesquisa */
+    border: none; /* Sem borda */
+    padding: 6px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+}
+.Lupa-icon { /* Ícone de lupa */
+    font-size: 1.2rem; /* Tamanho do ícone */
+    color: #111; /* Cor preta */
+    margin-left: 4px; /* Espaço à esquerda do ícone */
+    cursor: pointer; /* Cursor de mão ao passar */
+}
+
+nav.Menu-lat{ /* Menu lateral */
+    display: flex; /* Usa flexbox para alinhar os itens */
+    flex-direction: column; /* Itens em coluna */
+    background: #111; /* Fundo preto */
+    border-radius: 4px; /* Bordas arredondadas */
+    padding: 40px 0 40px 1%; /* Espaçamento interno */
+    margin: 0 8px; /* Espaço lateral */
+    width: 80px; /* Largura fechada (apenas ícones) */
+    height: 100%; /* Altura total */
+    box-shadow: 3px 0 0 #FFD600; /* Sombra amarela de detalhe */
+    position: sticky; /* Fixa o menu na tela */
+    top: 0; /* Fixa no topo */ 
+    left: 0; /* Fixa na esquerda */
+    overflow-y: auto; /* Só rolagem vertical */
+    overflow-x: hidden; /* Esconde rolagem horizontal */
+    transition: 0.5s;
+    overflow: hidden;
+    margin-left: 0; /* Remove margem esquerda */
+}
+nav.Menu-lat:hover{
+    width: 220px; /* Largura do menu ao passar o mouse */
+    transition: width 0.5s;
+}
+
+.btn-exp{
+    width: 100%; /* Botão ocupa toda a largura do menu */
+    background: transparent; /* Fundo transparente */
+    color: #FFD600; /* Ícone amarelo */
+    padding-left: 10px; /* Espaçamento interno à esquerda */
+}
+
+.btn-exp > i{
+    color: #FFD600; /* Ícone amarelo */
+    font-size: 32px; /* Tamanho do ícone */
+    cursor: pointer; /* Cursor de mão ao passar */
+}
+
+ul{
+    height: 100%; /* Lista ocupa toda a altura */
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove espaçamento interno */
+}
+ul li.item-menu
+{
+    transition: 1s;
+}
+
+
+ul li.item-menu:hover{
+    background: wheat; /* Fundo ao passar o mouse */
+    cursor: pointer; /* Cursor de mão */
+    border-radius: 8px; /* Bordas arredondadas */
+
+}
+
+ul li.item-menu a{
+    color: #FFD600; /* Texto amarelo */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 20px; /* Tamanho da fonte */
+    padding: 20px; /* Espaçamento interno */
+    display: flex; /* Usa flexbox para alinhar os itens */
+    margin-bottom: 20px; /* Espaço entre os itens */
+    line-height: 40px; /* Espaçamento entre linhas */
+}
+
+ul li.item-menu a .text-menu{
+    margin-left: 16px;
+    color: #FFD600; /* Texto amarelo */
+    opacity: 0; /* Esconde texto quando fechado */
+    transition: opacity 0.3s;
+}
+nav.Menu-lat:hover ul li.item-menu a .text-menu {
+    opacity: 1; /* Mostra texto quando expandido */
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 32px;
+    color: #FFD600; /* Ícone amarelo */
+    cursor: pointer; /* Cursor de mão ao passar */
+}
+
+/* Mudança: Alinhar ícones do menu lateral à esquerda */
+ul li.item-menu a .icon-menu {
+    display: flex; /* Garante que o ícone fique em linha */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: flex-start; /* Alinha à esquerda */
+}
+
+
+/* Mudança: Seletor mais específico para garantir alinhamento dos ícones à esquerda no menu lateral */
+.asidediv nav.Menu-lat ul li.item-menu a .icon-menu {
+    display: flex !important; /* Garante flexbox mesmo se houver conflito */
+    align-items: center !important; /* Centraliza verticalmente */
+    justify-content: flex-start !important; /* Alinha à esquerda */
+}
