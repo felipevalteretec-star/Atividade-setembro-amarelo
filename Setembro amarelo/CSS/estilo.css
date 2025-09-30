@@ -194,9 +194,12 @@ body {
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     padding: 32px;
     margin: 32px 0;
-    /* Estiliza o conteúdo principal *//* Posiciona na área 'main' do grid */
     background-color: orange; /* Cor de fundo laranja */
-    width: 100%; /* Mudança: main ocupa todo o espaço disponível */
+    width: 100%; /* Ocupa todo o espaço disponível na grid */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+    max-width: 100%; /* Garante que o main não ultrapasse o limite lateral */
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+    /* Correção: impede que o conteúdo principal ultrapasse os limites da grid */
 }
 
 .maindiv h1, .maindiv h2, .maindiv h3 {
