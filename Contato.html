@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em contato</title>
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body class="divisao">
+    <!-- Cabeçalho principal -->
+    <header id="Headerdiv">
+        <div class="cabecalho-conteudo">
+              <h1>Você importa! Disque 188!</h1>
+              <!-- Mudança: ícone de login agora é um link para a página de login -->
+              <a href="login.html" class="login-icon" title="Login">&#128100;</a>
+        </div>
+        <!-- Barra de navegação principal -->
+        <nav id="Navdiv" class="navbarra">
+            <a href="index.html" class="nav-btn">Página inicial</a>
+            <a href="Ajuda.html" class="nav-btn">Procure ajuda</a>
+            <div class="Barra-pesquisa">
+                <input type="text" placeholder="Pesquisar...">
+                <span class="Lupa-icon">&#128269;</span> <!-- Ícone de lupa -->
+            </div>
+            <a href="saiba+.html" class="nav-btn">Saiba Mais</a>
+            <a href="Contato.html" class="nav-btn">Entre em contato</a>
+        </nav>
+    </header>
+    <section class="bannerdiv">
+        <!-- Banner ou destaque da página -->
+        Banner ou destaque
+    </section>
+    <main class="maindiv">
+        <!-- Conteúdo principal da página -->
+<h2>Entre em Contato</h2>
+<p>Se você deseja falar com a equipe do projeto <strong>AMARelo</strong>, preencha o formulário abaixo ou entre em contato diretamente.</p>
+<hr>
+<form>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required> <br>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required><br>
+
+    <label for="mensagem">Mensagem:</label><br>
+    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+
+    <button type="submit">Enviar</button>
+</form>
+ <hr>
+<div class="contato-extra">
+    <h3>Precisa de ajuda imediata?</h3>
+    <p>Você pode entrar em contato com um dos criadores do site:</p>
+    <p><strong>📞 WhatsApp: <a href="https://wa.me/5511977818235" target="_blank">11 97781-8235</a></strong></p>
+    
+    <h4>📌 Canais de Ajuda 24h</h4>
+    <ul>
+        <li><strong>CVV – Centro de Valorização da Vida:</strong> Ligue <a href="tel:188">188</a> (atendimento gratuito e sigiloso, 24h por dia)</li>
+        <li><strong>SAMU:</strong> Ligue <a href="tel:192">192</a> em situações de emergência</li>
+    </ul>
+    <p>Não hesite em buscar ajuda. Falar é sempre o melhor caminho. 💛</p>
+</div>
+
+    </main>
+    <aside class="asidediv">
+        <!-- Menu lateral corrigido -->
+        <nav class="Menu-lat">
+            <div class="btn-exp">
+                <i class="bi bi-list"></i>
+            </div>
+            <ul>
+                <li class="item-menu">
+                    <!-- Mudança: menu lateral Cadastro agora é link para cadastro.html -->
+                    <a href="cadastro.html">
+                        <span class="icon-menu">
+                            <i class="bi bi-person-square"></i>
+                        </span>
+                        <span class="text-menu">Cadastro</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <!-- Mudança: menu lateral Login agora é link para login.html -->
+                    <a href="login.html">
+                        <span class="icon-menu">
+                            <i class="bi bi-box-arrow-in-left"></i>
+                        </span>
+                        <span class="text-menu">Login</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <footer class="footerdiv">
+        <p><strong>AMARelo</strong> © 2025 - Todos os direitos reservados</p>
+        <p>#SetembroAmarelo #VocêImporta #SaúdeMentalImporta #FalarÉACura</p>
+    </footer>
