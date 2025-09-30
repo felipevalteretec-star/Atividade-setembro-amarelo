@@ -528,3 +528,35 @@ ul li.item-menu a .icon-menu {
     color: #ffd600; /* Link amarelo para destaque */
     text-decoration: underline; /* Sublinhado para indicar link */
 }
+
+.contato-extra {
+    margin-top: 30px;
+    background-color: #fff2cc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contato-extra h3 {
+    margin-top: 0;
+    color: #b38600;
+}
+
+.contato-extra h4 {
+    margin-bottom: 10px;
+    color: #996600;
+}
+
+.contato-extra ul {
+    list-style-type: "✔ ";
+    padding-left: 20px;
+}
+
+.contato-extra a {
+    color: #cc7a00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contato-extra a:hover {
+    text-decoration: underline;
+}
